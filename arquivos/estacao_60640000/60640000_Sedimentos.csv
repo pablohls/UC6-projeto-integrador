@@ -1,0 +1,15 @@
+Agência Nacional de Águas - ANA
+Superintendência de Gestão da Rede Hidrometeorológica-SGH
+Sistema de Informações Hidrológicas - Versão WEB
+Fone: (61) 2109-5242
+E-mail: hidro@ana.gov.br
+
+NivelConsistencia: 1 = Bruto, 2 = Consistido
+
+Restrições da consulta:
+Código da Estação:60640000
+
+
+EstacaoCodigo;NivelConsistencia;Data;Hora;NumMedicao;DataLiq;HoraLiq;NumMedicaoLiq;Cota;Vazao;AreaMolhada;Largura;VelMedia;ConcentracaoMatSuspensao;CotaDeMedicao;TemperaturaDaAgua;ConcentracaoDaAmostraExtra;CondutividadeEletrica;Observacoes
+60640000;1;18/07/2019;01/01/1900 14:30;185;18/07/2019;01/01/1900 10:09;185;157;"3,4";"13,0";"18,0";"0,259";"2,6";157;;;"144,4";
+60640000;1;18/07/2019;01/01/1900 17:00;186;18/07/2019;01/01/1900 16:20;186;157;"3,84";"14,55";"18,0";"0,264";"2,8";157;;;"134,0";
