@@ -3,24 +3,42 @@ from graficos.plot_graficos_dados import PlotGraficosDados
 from processamento.processamento_dados import ProcessamentoDados
 
 tratamento = Tratamento()
-processamento = ProcessamentoDados()
+processador = ProcessamentoDados()
 plot = PlotGraficosDados()
 
 # local_arquivo = (
 #     r"C:\Users\Técnico em IA\PycharmProjects\PythonProject\60635000_Cotas.csv"
 # )
 
-data_frame = tratamento.tratar_dados(
+df_tratado = tratamento.tratar_dados(
     r"/Users/pablolemes/Documents/trabalho/IA - Senac/UC6-projeto-integrador/arquivos/estacao_60635000/60635000_Cotas.csv"
 )
 
-# teste_diario = processamento.media_diaria_cotas(data_frame, "01/2023", "06/2024")
-# # teste_diario = processamento.media_mensal_cotas(data_frame, "01/2023", "06/2024")
 
+# Define o intervalo de tempo desejado
+data_inicial = "01/2023"
+data_final = "12/2023"
 
-# plot.plot_cotas(
-#     df=teste_diario,
-#     titulo="Média Diaria de jan/2023 a jun/2024",
-#     intervalo_xticks=15,
+# Calcula a média diária
+df_media_diaria = processador.media_diaria_cotas(df_tratado, data_inicial, data_final)
+
+# Calcula a média mensal
+df_media_mensal = processador.media_mensal_cotas(df_tratado, data_inicial, data_final)
+
+# Plota os dados diários
+# PlotGraficosDados.plot_cotas(
+#     df_media_diaria,
+#     "Cota Diária",
+#     intervalo_xticks=10,
 #     group_by_month=False,
+#     show_tendencia=True,
 # )
+
+# Plota os dados mensais
+PlotGraficosDados.plot_cotas(
+    df_media_mensal,
+    "Cota Mensal",
+    intervalo_xticks=1,
+    group_by_month=True,
+    show_tendencia=False,
+)
